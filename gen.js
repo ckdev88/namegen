@@ -1,5 +1,3 @@
-let totalchars = 0
-
 const vowels = ['a', 'e', 'i', 'o', 'u', 'y']
 const consenants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 't', 'v', 'w', 'x', 'z']
 
@@ -18,8 +16,7 @@ function namegen(maxchars = 6) {
 		else result += getConsenants(newamount)
 		doVowel = !doVowel
 	}
-	console.log(result)
-	if (totalchars > maxchars) return result
+	return result
 }
 
 function getVowels(amount) {
@@ -29,6 +26,7 @@ function getVowels(amount) {
 	}
 	return result
 }
+
 function getConsenants(amount) {
 	let result = ''
 	for (let i = 0; i < amount; i++) {
@@ -37,4 +35,7 @@ function getConsenants(amount) {
 	return result
 }
 
-namegen(6)
+const amountofnames = 20
+for (let i = 0; i < amountofnames; i++) {
+	console.log(namegen(7))
+}
