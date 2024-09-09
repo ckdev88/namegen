@@ -9,7 +9,7 @@ function namegen(maxchars = 6) {
 	let chars = 0
 	let result = ''
 
-	while (chars < maxchars) {
+	while (chars < maxchars - 1) {
 		let newamount = Math.floor(Math.random() * 2 + 1)
 		chars += newamount
 		if (doVowel === true) result += getVowels(newamount)
@@ -35,7 +35,7 @@ function getConsenants(amount) {
 	return result
 }
 
-const amountofnames = 20
+const amountofnames = 50
 for (let i = 0; i < amountofnames; i++) {
-	console.log(namegen(7))
+	console.log(namegen(6))
 }
